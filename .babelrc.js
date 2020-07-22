@@ -10,6 +10,7 @@ module.exports = (api, options) => {
   const plugins = [
     'lodash',
     'date-fns',
+    'transform-react-handled-props',
     ['@babel/plugin-proposal-class-properties', { loose: true }],
     '@babel/plugin-proposal-optional-chaining',
     '@babel/plugin-proposal-nullish-coalescing-operator',
