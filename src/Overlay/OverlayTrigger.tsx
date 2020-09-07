@@ -10,6 +10,30 @@ import getDOMNode from '../utils/getDOMNode';
 import Portal from '../Portal';
 import { OverlayTriggerProps } from './OverlayTrigger.d';
 
+const hardCodedPropTypes = [
+  'animation',
+  'container',
+  'children',
+  'onRendered',
+  'className',
+  'containerPadding',
+  'placement',
+  'shouldUpdatePosition',
+  'preventOverflow',
+  'show',
+  'rootClose',
+  'transition',
+  'positionRef',
+  'target',
+  'onHide',
+  'onEnter',
+  'onEntering',
+  'onEntered',
+  'onExit',
+  'onExiting',
+  'onExited',
+];
+
 function isNullOrUndefined(value: any): boolean {
   return value === null || typeof value === 'undefined';
 }
@@ -75,8 +99,9 @@ class OverlayTrigger extends React.Component<OverlayTriggerProps, OverlayTrigger
   getOverlay() {
     const { open, speaker, trigger, onHide } = this.props;
     const { isOverlayShown } = this.state;
+    const overlayPropTypes = Overlay.propTypes ? Object.keys(Overlay.propTypes) : hardCodedPropTypes;
     const overlayProps: OverlayProps = {
-      ...pick(this.props, Object.keys(Overlay.propTypes)),
+      ...pick(this.props, overlayPropTypes),
       show: typeof open === 'undefined' ? isOverlayShown : open,
       target: this.getOverlayTarget
     };

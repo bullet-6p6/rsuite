@@ -248,6 +248,8 @@ class Transition extends React.Component<TransitionProps, TransitionState> {
       enteringClassName,
       enteredClassName,
       exitingClassName,
+      onEntered,
+      in: propIn,
       ...rest
     } = this.props;
 
