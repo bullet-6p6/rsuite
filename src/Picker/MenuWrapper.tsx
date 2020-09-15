@@ -17,7 +17,8 @@ const omitProps = [
   'positionTop',
   'getPositionInstance',
   'getToggleInstance',
-  'autoWidth'
+  'autoWidth',
+  'onEntering'
 ];
 
 const resizePlacement = [
