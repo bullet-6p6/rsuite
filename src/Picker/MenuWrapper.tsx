@@ -18,7 +18,14 @@ const omitProps = [
   'getPositionInstance',
   'getToggleInstance',
   'autoWidth',
-  'onEntering'
+  'onEntering',
+  'onExiting',
+  'onExit',
+  'transitionAppear',
+  'focusItemValue',
+  'dropdownMenuItemComponentClass',
+  'dropdownMenuItemClassPrefix',
+  'classPrefix'
 ];
 
 const resizePlacement = [
