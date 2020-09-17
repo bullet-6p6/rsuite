@@ -21,11 +21,14 @@ const omitProps = [
   'onEntering',
   'onExiting',
   'onExit',
+  'onEnter',
+  'onExited',
   'transitionAppear',
   'focusItemValue',
   'dropdownMenuItemComponentClass',
   'dropdownMenuItemClassPrefix',
-  'classPrefix'
+  'classPrefix',
+  'virtualized'
 ];
 
 const resizePlacement = [
